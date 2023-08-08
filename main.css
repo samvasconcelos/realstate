@@ -473,11 +473,16 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
 }
-.home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+.home__location , .home__rooms svg, .home__area svg, .home__price svg {
   fill: #c69963;
   height: 2rem;
   width: 2rem;
   margin: 1rem 1.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+    margin: 1rem 1rem;
+  }
 }
 .home__location p, .home__rooms p, .home__area p, .home__price p {
   font-size: 1.6rem;
