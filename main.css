@@ -606,7 +606,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   overflow: hidden;
   grid-column: full-start/full-end;
-  grid-template-columns: minmax(30rem, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 }
 .story__pictures {
   background-image: linear-gradient(to bottom right, rgba(198, 153, 99, 0.5), rgba(178, 132, 81, 0.5)), url(img/back.jpg);
