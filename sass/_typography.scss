@@ -1,0 +1,85 @@
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Josefin, sans-serif;
+}
+
+// ------------ HEADINGS -------------
+
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+.heading-1 {
+  @extend %heading;
+  font-size: 4.5rem;
+  color: $color-grey-light-1;
+  line-height: 1;
+  margin-left: -1rem;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+
+  &--light { color: $color-grey-light-1; }
+  &--dark { color: $color-grey-dark-1; }
+
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 1.6rem;
+  color: $color-primary-dark;
+  text-transform: uppercase;
+
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 2.5rem;
+  align-self: center;
+
+  &--light { color: $color-grey-light-1; }
+  &--dark { color: $color-grey-dark-1; }
+
+  padding-inline: 1.5rem;
+  text-transform: capitalize;
+
+}
+
+// ------------ BUTTONS -------------
+
+.btn {
+  background-color: $color-primary;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  text-align: center;
+  padding: 2rem 1.6rem;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: 500ms;
+
+  &:hover {
+    background-color: $color-grey-dark-2;
+  }
+
+  grid-row: 4 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.home__btn {
+  grid-column: 1 / -1;
+  grid-row: 5 / span 1;
+  // margin: 0 auto;
+  grid-gap: 0;
+}
+

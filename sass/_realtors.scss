@@ -1,0 +1,72 @@
+.realtors {
+  display: block;
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+  grid-row: 1 / 2;
+  width: 100%;
+  min-height: 60rem;
+  box-shadow: inset 2rem 0 8rem $color-secondary-dark, inset -8rem 0 8rem $color-secondary-dark;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  @include responsiveMax($thousand) {
+    grid-row: 2 / 3;
+    grid-column: full-start / full-end;
+    padding: 5rem;
+  }
+
+  &__workers {
+    transform: scale(1.1);
+    width: auto;
+    display: grid;
+    row-gap: 4rem;
+    column-gap: 0;
+    grid-template-columns: .8fr 1fr;
+    align-items: center;
+
+    @include responsiveMax($tab-land) {
+      transform: scale(.95);
+    }
+  }
+
+  img {
+    justify-self: left;
+    width: 7rem;
+    border-radius: 100%;
+  }
+
+
+  &__details {
+    display: grid;
+    gap: .5rem;
+
+  } 
+
+  // ------------ HEADINGS AND TEXT -------------
+
+  &__heading-3 {
+    font-family: $font-display;
+    font-weight: 400; 
+    font-size: 2rem;
+    color: $color-primary-dark;
+    text-transform: uppercase;
+  }
+
+  &__heading-4 {
+    font-family: $font-display;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $color-grey-light-1;
+  }
+
+  &__description {
+    color: $color-grey-light-2;
+    font-size: 1.2rem;
+    margin-left: 2px;
+    text-transform: uppercase;
+  }
+}

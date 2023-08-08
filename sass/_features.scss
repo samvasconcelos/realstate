@@ -1,0 +1,48 @@
+.features {
+  grid-column: center-start / center-end;
+  padding-block: 10rem;
+
+  // Grid
+  display: grid;
+  // grid-template-columns: repeat(3, minmax(6rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: 10rem 6rem;
+  min-height: 60rem;
+  overflow: hidden;
+
+
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content minmax(150px, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  gap: 3.5rem;
+
+  @include responsiveMax($tab-land) {
+    gap: 1.5rem;
+    min-height: 20rem;
+  }
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    align-self: flex-start;
+    justify-self: flex-end;
+    // Grid
+
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: $color-grey-dark-1;
+    padding-inline-start: 1.5rem;
+    align-self: baseline;
+
+    // Grid
+    grid-column: 2/ span 1;
+
+  }
+}
